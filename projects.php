@@ -4,6 +4,7 @@ require "conn.php";
 require "nav.php";
 ?>
 
+<a href="create_project.php">创建一个</a>
 
 <?
 $sql ="SELECT * FROM `projects`"; //SQL语句
