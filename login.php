@@ -32,18 +32,30 @@ if($method==='POST'){
     <?
 }else{
     ?>
-    <form method="post">
-        <div class="form-group">
-            <input class="form-control" placeholder="账号" name="name" type="text">
+
+    <div class="box-outer">
+            <div class="box-inner">
+                <div class="boxbar">
+                    <h2>登录</h2>
+                    <!--<a data-cmd="x-wot" href="#" class="closebutton"></a>-->
+                </div>
+                <div class="boxcontent">
+                    <div id="wot-cnt">
+                            <form method="post">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="账号" name="name" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="密码" name="pass" type="text">
+                                </div>
+                                <input class="btn btn-primary" type="submit" value="登录" />
+                                <a href="reg.php">注册</a>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <input class="form-control" placeholder="密码" name="pass" type="text">
-        </div>
-        <input class="btn btn-primary" type="submit" value="登录" />
-        <a href="reg.php">注册</a>
-        </div>
-    </form>
-    
     <?
 }
 ?>

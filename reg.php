@@ -21,35 +21,73 @@ if($method==='POST'){
         //header("location: login.php");
         //echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"5;url='login.php'\">";
         ?>
-        注册成功，请<a href="login.php">登录</a>。
+        
+        <div class="box-outer">
+            <div class="box-inner">
+                <div class="boxbar">
+                    <h2>注册成功</h2>
+                    <!--<a data-cmd="x-wot" href="#" class="closebutton"></a>-->
+                </div>
+                <div class="boxcontent">
+                    <div id="wot-cnt">
+                            注册成功，请<a href="login.php">登录</a>。
+                    </div>
+                </div>
+            </div>
+        </div>
         <?
     }else{
         ?>
-        用户名已经被注册了，请重新注册
-        <form method="post">
-            <div class="form-group">
-                <input class="form-control" placeholder="账号" name="name" type="text">
+        
+        <div class="box-outer">
+            <div class="box-inner">
+                <div class="boxbar">
+                    <h2>用户名已经被注册了，请重新注册</h2>
+                    <!--<a data-cmd="x-wot" href="#" class="closebutton"></a>-->
+                </div>
+                <div class="boxcontent">
+                    <div id="wot-cnt">
+                            <form method="post">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="账号" name="name" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input <input class="form-control" placeholder="密码" name="pass" type="text">
+                                </div>
+                                <input class="btn btn-primary" type="submit" value="注册" />
+                            </form>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <input <input class="form-control" placeholder="密码" name="pass" type="text">
-            </div>
-            <input class="btn btn-primary" type="submit" value="reg" />
-        </form>
+        </div>
         <?
     }
     ?>
     <?
 }else{
     ?>
-    <form method="post">
-        <div class="form-group">
-            <input class="form-control" placeholder="账号" name="name" type="text">
+
+    <div class="box-outer">
+            <div class="box-inner">
+                <div class="boxbar">
+                    <h2>注册</h2>
+                    <!--<a data-cmd="x-wot" href="#" class="closebutton"></a>-->
+                </div>
+                <div class="boxcontent">
+                    <div id="wot-cnt">
+                            <form method="post">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="账号" name="name" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <input <input class="form-control" placeholder="密码" name="pass" type="text">
+                                </div>
+                                <input class="btn btn-primary" type="submit" value="注册" />
+                            </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <input <input class="form-control" placeholder="密码" name="pass" type="text">
-        </div>
-        <input class="btn btn-primary" type="submit" value="注册" />
-    </form>
     <?
 }
 ?>

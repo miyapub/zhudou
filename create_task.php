@@ -37,19 +37,37 @@ if($method==='GET'){
     <?
     $list_id=$_GET['list_id'];
     ?>
-
-    <form action="" method="post">
-        <div class="form-group">
-            <input type="hidden" name="list_id" value="<?=$list_id?>">
-            <input class="form-control" placeholder="任务名称" name="title" type="text">
+        <div class="box-outer">
+        <div class="box-inner">
+            <div class="boxbar">
+                <h2>发布</h2>
+                <!--<a data-cmd="x-wot" href="#" class="closebutton"></a>-->
+            </div>
+            <div class="boxcontent">
+                <div id="wot-cnt">
+                    <h4>你的ip：<?=$ip?> 已被我们记录，切勿发布违法内容！</h4>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <input type="hidden" name="list_id" value="<?=$list_id?>">
+                            <input class="form-control" placeholder="任务名称" name="title" type="text">
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="添加任务">
+                    </form>
+                  </form>
+                </div>
+            </div>
         </div>
-        <input class="btn btn-primary" type="submit" value="添加任务">
-    </form>
+    </div>
+    
+    
 
 
     <?
 }
 ?>
+
+
 <?
+require "footer.php";
 mysql_close();
 ?>

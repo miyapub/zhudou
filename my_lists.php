@@ -7,6 +7,7 @@ require "nav.php";
 
 
 <div>
+    <a href="create_list.php">创建列表</a>
 <?
 if (isset($_SESSION['user_id'])) {
     //do something
