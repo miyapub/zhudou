@@ -175,7 +175,7 @@ a.post:visited {
 
 .stat-cell {
     display: inline-block;
-    width: 33%;
+    width: 30%;
 }
 
 
@@ -188,13 +188,18 @@ a.post:visited {
 
 .c-thread {
     vertical-align: top;
-    display: inline-block;
+    display: inline-table;
     word-wrap: break-word;
     overflow: hidden;
     margin-top: 5px;
     padding: 5px 0 3px 0;
     position: relative;
-    width: 175px;
+    width: 30%;
     max-height: 320px;
     margin-bottom: 10px;
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
 }

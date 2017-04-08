@@ -22,9 +22,9 @@ $CurrentProjects=$rows['count'];
             <h2>Stats</h2>
         </div>
         <div class="boxcontent">
-            <div class="stat-cell"><b>Current Lists:</b> <?=$CurrentLists?></div>
-            <div class="stat-cell"><b>Current Users:</b> <?=$CurrentUsers?></div>
-            <div class="stat-cell"><b>Current Projects:</b> <?=$CurrentProjects?></div>
+            <div class="stat-cell"><b>清单:</b> <?=$CurrentLists?></div>
+            <div class="stat-cell"><b>用户:</b> <?=$CurrentUsers?></div>
+            <div class="stat-cell"><b>帖子:</b> <?=$CurrentProjects?></div>
         </div>
     </div>
 </div>

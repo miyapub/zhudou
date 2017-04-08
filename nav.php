@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
-    <link rel="stylesheet" href="css/style.css?v=3.2">
+    <link rel="stylesheet" href="css/style.css?v=3.3">
     <body>
     
     <?
@@ -41,7 +41,10 @@ if (isset($_SESSION['user_name'])) {
         <a href="index.php">首页</a>
     </li>
     <li>
-        <a href="my_lists.php">我的列表</a>
+        <a href="lists.php">公共清单</a>
+    </li>
+    <li>
+        <a href="my_lists.php">我的清单</a>
     </li>
     <li>
         <?=$_SESSION['user_name']?>
@@ -59,10 +62,10 @@ if (isset($_SESSION['user_name'])) {
         <a href="login.php">登录</a>
     </li>
     <li>
-        匿名用户
+        <a href="lists.php">公共清单</a>
     </li>
     <li>
-        <a href="public.php">随便看看</a>
+        匿名用户
     </li>
     <?
 }

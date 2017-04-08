@@ -17,6 +17,7 @@ if($method==='POST'){
         if($row['pass']===$pass){
             $_SESSION['user_id']=$row['id'];
             $_SESSION['user_name']=$row['name'];
+            $_SESSION['is_admin']=$row['is_admin'];
             echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url='index.php'\">";
         }else{
             ?>

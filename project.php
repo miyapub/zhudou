@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
     ?>
 
     <?
-    $project_id=$_GET['id'];
+    $project_id=mysql_real_escape_string($_GET['id']);
     $sql ="SELECT users.id as user_id,projects.text as content,projects.ip as ip,users.name as user_name,projects.title as project_title,projects.pic as pic FROM `users`,`projects` WHERE users.id=projects.created_by and `projects`.id=$project_id";
 
     $result = mysql_query($sql,$conn); //查询
@@ -47,7 +47,13 @@ if (isset($_GET['id'])) {
 
             ?>
 
+            <div>
+            
             <?=$row['user_name'];?> : <?=$row['comment'];?>
+            
+            </div>
+
+            
 
             <?
         }
@@ -85,13 +91,16 @@ if (isset($_GET['id'])) {
     }
     ?>
 
+        
 
     <?
+
     if (isset($_SESSION['user_id'])) {
         //do something
-        if($row['user_id']===$_SESSION['user_id']){
+        if($row['user_id']===$_SESSION['user_id'] || $_SESSION['is_admin']===1 || $_SESSION['is_admin']==="1"){
             ?>
             <a href="edit_project.php?id=<?=$project_id?>">编辑</a>
+            <a href="del_project.php?id=<?=$project_id?>">删除</a>
             <?
         }
     }
