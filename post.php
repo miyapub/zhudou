@@ -1,12 +1,16 @@
 <?
-require "../conn.php";
-require "../ip.php";
+require "conn.php";
+require "ip.php";
 $method = $_SERVER['REQUEST_METHOD'];
 if($method==='GET'){
     $id=mysql_real_escape_string($_GET['id']);
     $sql ="SELECT * FROM `posts` WHERE id=$id"; 
     $result = mysql_query($sql,$conn);
     $row = mysql_fetch_array($result);
+    if($row['verify']===0 || $row['verify']==='0'){
+        echo 'wating for verify';
+        exit;
+    }
 }
 ?>
 
@@ -17,7 +21,7 @@ if($method==='GET'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?=$row['text']?></title>
-    <link rel="stylesheet" href="../css/style.css?v=3.3">
+    <link rel="stylesheet" href="css/style.css?v=3.3">
     <body>
 <?
 require "n.php";
@@ -113,7 +117,7 @@ require "n.php";
                             <form action="save.php" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="pid" value="<?=$id?>">
                                 <div>
-                                    <input type="text" name="code" /><img src="../code.php?id=<?=rand()?>" alt="">
+                                    <input type="text" name="code" /><img src="code.php?id=<?=rand()?>" alt="">
                                 </div>
                                 
                                 <div>

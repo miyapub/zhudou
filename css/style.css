@@ -3,10 +3,156 @@
     padding: 0;
 }
 body{
-    padding: 10px;
-    background: #ffe url(/images/fade.png) top repeat-x;
-    color: #800;
+    background:#f1f2fa;
+    width: 100%;
+    width: 100%;
+    margin: 0 auto;
 }
+
+.box{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+
+.global-nav {
+    height: 60px;
+    width: 100%;
+    z-index: 888;
+    text-align: right;
+    background: #fff;
+    border-bottom: 1px solid #dfe0e7;
+    box-shadow: 0 0 5px rgba(0,0,0,.08);
+}
+
+.logo {
+    margin: 0px 0 0;
+    width: 120px;
+    height: 60px;
+    background: url(../images/logo.png) no-repeat 0;
+    background-size: 50%;
+    float: left;
+}
+
+.menu {
+    margin: 10px 0 0 115px;
+    padding: 0 20px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+    font-size: 16px;
+}
+
+.menu-item {
+    height: 40px;
+    float: left;
+    display: inline;
+    position: relative;
+    z-index: 9;
+}
+
+.menu-item a {
+    margin: 0 25px;
+    display: block;
+    position: relative;
+    color: #434a54;
+}
+
+.menu li.on a:after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #dd3a23;
+    position: absolute;
+    width: 100%;
+    bottom: -21px;
+}
+
+.user-opts {
+    margin: 0;
+    float: right;
+}
+
+.user-opts li {
+    margin-right: 30px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    position: relative;
+}
+
+.user-opts a {
+    display: inline-block;
+}
+
+.clear {
+    zoom: 1;
+}
+
+.user-opts a.signin {
+    margin-top: 4px;
+    padding: 0;
+    width: 68px;
+    height: 32px;
+    line-height: 32px;
+    background:#dd3a23;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+.tags-name {
+    margin: 20px auto;
+    text-indent: 10px;
+    font-weight: 700;
+    width: 1190px;
+    overflow: hidden;
+    position: relative;
+    font-size: 16px;
+}
+
+
+.main {
+    margin-right: 20px;
+    width: 850px;
+}
+
+
+
+iframe.msg{
+    border: 0;
+    height: 40px;
+}
+
+/**/
+.nav {
+    text-align: center;
+    margin-bottom: 10px;
+    background: #edf4ed;
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+.nav ul{
+    display: table;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.nav li{
+    display: inline-block;
+    padding:10px;
+}
+
+.nav li.first {
+    
+}
+
+
 
 #announce {
     background: #fff;
@@ -21,7 +167,7 @@ body{
 
 
 .announce .boxbar {
-    background: #800;
+    background: #072;
     color: #fff;
     position: relative;
     zoom: 100%;
@@ -30,7 +176,7 @@ body{
 }
 
 .closebutton {
-    background: #800 url(/images/icon-close-red.png);
+    background: #800;
     position: absolute;
     top: 0;
     right: 0;
@@ -108,17 +254,17 @@ ul{
 }
 
 li {
-    background: #fed;
     list-style: none;
+    display: inline-table;
+    text-align: center;
+    padding: 10px;
 }
 
 a {
-    color: #800;
     text-decoration: none;
 }
 
 a:visited {
-    color: blue;
 }
 
 
@@ -126,38 +272,16 @@ a:visited {
 
 
 
-.nav {
-    text-align: center;
-    margin-bottom: 10px;
-}
 
-.nav ul{
-    display: table;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-}
-
-.nav li{
-    display: inline;
-    border: 1px solid;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 2px;
-    border-left: none;
-    margin-top: -1px;
-    padding-top: 2px;
-}
-
-.nav li.first {
-    border-left: 1px solid;
-}
 
 .footer{
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
     font-size: 12px;
+    background: #3c404d;
+    color: #aab2bd;
+    padding: 40px 0 40px 0;
 }
 
 a.page{
@@ -202,4 +326,153 @@ a.post:visited {
 
 img{
     max-width: 100%;
+}
+
+
+/*新鲜事儿*/
+
+.stream-items .status-wrapper:first-child {
+    padding-top: 0;
+}
+
+.stream-items .status-wrapper {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.status-wrapper {
+    padding: 25px 0;
+}
+
+.status-item {
+    overflow: hidden;
+    color: #555;
+}
+
+.status-item .mod {
+    margin: 0;
+}
+
+.mod {
+    width: auto;
+}
+
+.status-item .hd {
+    margin-bottom: 10px;
+}
+
+.status-item .hd .usr-pic {
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-right: 20px;
+}
+
+.status-item .hd .usr-pic img {
+    width: 48px;
+    height: 48px;
+}
+
+a img {
+    border-width: 0;
+    vertical-align: middle;
+}
+.status-item .hd .text {
+    overflow: hidden;
+    position: relative;
+    font-size: 13px;
+    color: #9d9d9d;
+}
+
+.status-item .hd .text .lnk-people:link, .status-item .hd .text .lnk-people:visited {
+    color: #555;
+}
+
+.status-item .bd {
+    zoom: 1;
+    padding-left: 11%;
+}
+
+.status-item .block {
+    overflow: hidden;
+    zoom: 1;
+    padding: 16px 20px;
+    background: #f9f9f9;
+}
+
+.status-item .mod .note-block .pic {
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+    max-height: none;
+    width: 107px;
+    height: 72px;
+    margin-right: 5px;
+    margin-left: 24px;
+}
+
+.status-item .mod .note-block .pic .pic-wrap {
+    position: absolute;
+    top: -20%;
+    bottom: -20%;
+    left: -100%;
+    right: -100%;
+    text-align: center;
+    letter-spacing: -.31em;
+}
+
+.status-item .mod .note-block .pic .pic-wrap img {
+    vertical-align: middle;
+    width: 80px;
+}
+
+.status-item .mod .note-block .pic .valign {
+    display: inline-block;
+    vertical-align: top;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.status-item .block .content {
+    overflow: hidden;
+    zoom: 1;
+    word-wrap: break-word;
+}
+
+.status-item .block .title {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.status-item .mod p, .status-item .mod blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.status-item .attachment {
+    padding: 0 20px 16px;
+    margin-top: -16px;
+    background: #f9f9f9;
+}
+
+.status-item .mod .actions:not(.empty) {
+    line-height: 1;
+    text-align: left;
+    clear: both;
+    margin: 24px 0 8px;
+    color: #aaa;
+}
+
+.status-item .mod .created_at {
+    margin-right: 1.5em;
+}
+
+.status-item .mod .actions:not(.empty) {
+    line-height: 1;
+    text-align: left;
+    clear: both;
+    margin: 24px 0 8px;
+    color: #aaa;
 }

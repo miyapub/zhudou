@@ -1,7 +1,7 @@
 <?
 session_start();
-require "../conn.php";
-require "../ip.php";
+require "conn.php";
+require "ip.php";
 $method = $_SERVER['REQUEST_METHOD'];
 if($method==='POST'){
     //$tags=mysql_real_escape_string($_POST['tags']);

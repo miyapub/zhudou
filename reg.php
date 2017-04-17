@@ -1,6 +1,7 @@
 <?
 session_start();
-require "../conn.php";
+require "conn.php";
+require "ip.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +10,8 @@ require "../conn.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>reg</title>
-    <link rel="stylesheet" href="../css/style.css?v=3.3">
+    <title>新用户注册</title>
+    <link rel="stylesheet" href="css/style.css?v<?=$css_version?>">
     <body>
 
 <?

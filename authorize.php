@@ -7,5 +7,5 @@ if (isset($_SESSION['user_id'])) {
     $is_admin=$_SESSION['is_admin'];
 }else{
     //public
-    header("location: ../user/login.php");
+    header("location: login.php");
 }

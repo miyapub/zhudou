@@ -1,6 +1,6 @@
 <?
-require "../conn.php";
-require "../ip.php";
+require "conn.php";
+require "ip.php";
 $id=mysql_real_escape_string($_GET['id']);
 $pid=mysql_real_escape_string($_GET['pid']);
 

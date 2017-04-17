@@ -17,11 +17,13 @@ require "ip.php";
 <?
 require "n.php";
 ?>
+
 <div class="box">
     <div class="tags-name">
         新鲜事儿
     </div>
 </div>
+
 <div class="box-outer top-box box">
                 <div class="box-inner">
                     <div class="boxbar">
