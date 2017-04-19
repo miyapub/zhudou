@@ -4,16 +4,17 @@ session_start();
 require "conn.php";
 ?>
 
-<?
-$code=mysql_real_escape_string($_POST['code']);
-if($_SESSION['code']!=$code){
-        echo "code error";
-        exit;
-}
-$name=mysql_real_escape_string($_POST["name"]);
-$pass=mysql_real_escape_string($_POST["pass"]);
+  <?
 $method = $_SERVER['REQUEST_METHOD'];
 if($method==='POST'){
+    $code=strtoupper(mysql_real_escape_string($_POST['code']));
+    if($_SESSION['code']!=$code){
+        echo "code error";
+        exit;
+    }
+    $name=mysql_real_escape_string($_POST["name"]);
+    $pass=mysql_real_escape_string($_POST["pass"]);
+    
     $sql="SELECT * FROM `users` where `users`.name='$name'";
     $result = mysql_query($sql,$conn);
     $num_rows = mysql_num_rows($result);
@@ -35,46 +36,50 @@ if($method==='POST'){
         echo "没有该用户";
         exit;
     }
+    
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>login</title>
-    <link rel="stylesheet" href="css/style.css?v=3.3">
-    <body>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <?
-    require "n.php";
-    ?>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>login</title>
+      <link rel="stylesheet" href="css/style.css?v=3.3">
 
-    <div class="box">
-        <div class="tags-name">
-            登录
-        </div>
-    </div>
-    <div class="box">
-        <iframe class="msg" name="msg"></iframe>
-        <form method="post" target="msg">
-            <input placeholder="账号" name="name" type="text">
-            <input placeholder="密码" name="pass" type="text">
-            <div>
-                <input type="text" name="code" /><img src="code.php?id=<?=rand()?>" alt="">
+      <body>
+
+        <?
+require "n.php";
+?>
+
+          <div class="box">
+            <div class="tags-name">
+              登录
             </div>
-            <input class="btn btn-primary" type="submit" value="登录" />
-            <a href="reg.php">注册</a>
-        </form>
-        </div>
-   
+          </div>
+          <div class="box">
+            <iframe class="msg" name="msg"></iframe>
+            <form method="post" target="msg">
+              <input placeholder="账号" name="name" type="text">
+              <input placeholder="密码" name="pass" type="password">
+              <div class="check-code-pan">
+                <input type="text" class="check-code" placeholder="验证码" name="code" /><img class="code" src="code.php?id=<?=rand()?>" alt="">
+              </div>
+              <input class="btn-login" type="submit" value="登录" />
+              <a href="reg.php">注册</a>
+            </form>
+          </div>
 
-    <?
-    require "f.php";
-    mysql_close();
-    ?>
 
-    </body>
-</html>
+          <?
+require "f.php";
+mysql_close();
+?>
+
+      </body>
+
+    </html>

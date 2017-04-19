@@ -1,19 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
-    background:#f1f2fa;
+
+body {
+    background: #f1f2fa;
     width: 100%;
     width: 100%;
     margin: 0 auto;
 }
 
-.box{
+.box {
     max-width: 950px;
     margin: 0 auto;
 }
-
 
 .global-nav {
     height: 60px;
@@ -22,7 +22,7 @@ body{
     text-align: right;
     background: #fff;
     border-bottom: 1px solid #dfe0e7;
-    box-shadow: 0 0 5px rgba(0,0,0,.08);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .08);
 }
 
 .logo {
@@ -35,7 +35,7 @@ body{
 }
 
 .menu {
-    margin: 10px 0 0 115px;
+    margin: 10px 0 0 10px;
     padding: 0 20px;
     height: 20px;
     line-height: 20px;
@@ -52,7 +52,7 @@ body{
 }
 
 .menu-item a {
-    margin: 0 25px;
+    margin: 0 5px;
     display: block;
     position: relative;
     color: #434a54;
@@ -74,7 +74,7 @@ body{
 }
 
 .user-opts li {
-    margin-right: 30px;
+    margin-right: 10px;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -95,38 +95,140 @@ body{
     width: 68px;
     height: 32px;
     line-height: 32px;
-    background:#dd3a23;
+    background: #dd3a23;
     border-radius: 4px;
     color: #fff;
     text-align: center;
 }
 
+a.delete {
+    margin-top: 4px;
+    padding: 5px;
+    width: 68px;
+    height: 32px;
+    line-height: 32px;
+    background: #dd3a23;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+}
 
+input {
+    height: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    width: 220px;
+    display: block;
+    margin: 10px 0;
+}
+
+.check-code-pan {
+    margin-top: -10px;
+    width: 240px;
+}
+
+.check-code {
+    width: 120px;
+    display: inline-block;
+}
+
+img.code {
+    height: 40px;
+    width: 100px;
+    display: block;
+    float: right;
+    margin-top: 10px;
+}
+
+.btn-login {
+    margin-top: 4px;
+    padding: 5px;
+    width: 68px;
+    height: 32px;
+    background: #dd3a23;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-reg {
+    margin-top: 4px;
+    padding: 5px;
+    width: 68px;
+    height: 32px;
+    background: #dd3a23;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-post {
+    margin-top: 4px;
+    padding: 5px;
+    width: 68px;
+    height: 32px;
+    background: #dd3a23;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+.btn-edit {
+    margin-top: 4px;
+    padding: 5px;
+    width: 68px;
+    height: 32px;
+    background: #aec310;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+textarea {
+    border: 2px #d9d8d8 solid;
+    width: 100%;
+    height: 150px;
+}
 
 .tags-name {
     margin: 20px auto;
     text-indent: 10px;
     font-weight: 700;
-    width: 1190px;
+    width: 100%;
     overflow: hidden;
     position: relative;
     font-size: 16px;
 }
-
 
 .main {
     margin-right: 20px;
     width: 850px;
 }
 
-
-
-iframe.msg{
+iframe.msg {
     border: 0;
     height: 40px;
 }
 
+.select{
+    width: 240px;
+    padding: 10px;
+    margin: 10px auto;
+}
+
 /**/
+
 .nav {
     text-align: center;
     margin-bottom: 10px;
@@ -135,36 +237,31 @@ iframe.msg{
     margin-top: 0px;
 }
 
-
-.nav ul{
+.nav ul {
     display: table;
     margin: auto;
     width: 100%;
     text-align: center;
 }
 
-.nav li{
+.nav li {
     display: inline-block;
-    padding:10px;
+    padding: 10px;
 }
 
-.nav li.first {
-    
-}
-
-
+.nav li.first {}
 
 #announce {
     background: #fff;
     color: #000;
 }
+
 .box-outer {
     border: 1px solid;
     zoom: 100%;
     margin-bottom: .5em;
     padding-bottom: .5em;
 }
-
 
 .announce .boxbar {
     background: #072;
@@ -202,7 +299,6 @@ iframe.msg{
     padding-top: .25em;
     padding-bottom: 0;
 }
-
 
 .top-box {
     background: #fff;
@@ -242,13 +338,12 @@ h2 {
     font-size: 93%;
 }
 
-
-.ft{
+.ft {
     text-align: center;
     clear: both;
 }
 
-ul{
+ul {
     display: table;
     margin: auto;
 }
@@ -264,17 +359,13 @@ a {
     text-decoration: none;
 }
 
-a:visited {
+a:visited {}
+
+.created_at {
+    font-size: 12px;
 }
 
-
-
-
-
-
-
-
-.footer{
+.footer {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -284,24 +375,20 @@ a:visited {
     padding: 40px 0 40px 0;
 }
 
-a.page{
+a.page {
     font-size: 16px;
 }
 
-a.post{
-
+a.post {
     font-size: 14px;
 }
 
-a.post:visited {
-    
-}
+a.post:visited {}
 
 .stat-cell {
     display: inline-block;
     width: 30%;
 }
-
 
 .opts-btn {
     position: absolute;
@@ -324,23 +411,34 @@ a.post:visited {
     text-align: center;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
 
 /*新鲜事儿*/
 
-.stream-items .status-wrapper:first-child {
-    padding-top: 0;
+.stream-items {
+    margin: 20px 0;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.status-wrapper {
+    padding: 0;
 }
 
 .stream-items .status-wrapper {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.status-wrapper {
-    padding: 25px 0;
+.stream-items .status-wrapper:first-child {
+    padding-top: 0;
+}
+
+.stream-items .status-wrapper:last-child {
+    border-bottom: none;
 }
 
 .status-item {
@@ -376,6 +474,7 @@ a img {
     border-width: 0;
     vertical-align: middle;
 }
+
 .status-item .hd .text {
     overflow: hidden;
     position: relative;
@@ -383,20 +482,20 @@ a img {
     color: #9d9d9d;
 }
 
-.status-item .hd .text .lnk-people:link, .status-item .hd .text .lnk-people:visited {
+.status-item .hd .text .lnk-people:link,
+.status-item .hd .text .lnk-people:visited {
     color: #555;
 }
 
 .status-item .bd {
     zoom: 1;
-    padding-left: 11%;
 }
 
 .status-item .block {
     overflow: hidden;
     zoom: 1;
     padding: 16px 20px;
-    background: #f9f9f9;
+    background: blanchedalmond;
 }
 
 .status-item .mod .note-block .pic {
@@ -405,25 +504,19 @@ a img {
     font-size: 0;
     white-space: nowrap;
     max-height: none;
-    width: 107px;
-    height: 72px;
-    margin-right: 5px;
-    margin-left: 24px;
+    width: 100%;
 }
 
 .status-item .mod .note-block .pic .pic-wrap {
-    position: absolute;
-    top: -20%;
-    bottom: -20%;
-    left: -100%;
-    right: -100%;
     text-align: center;
     letter-spacing: -.31em;
 }
 
 .status-item .mod .note-block .pic .pic-wrap img {
     vertical-align: middle;
-    width: 80px;
+    width: 100%;
+    max-width: 100px;
+    border-radius: 5px;
 }
 
 .status-item .mod .note-block .pic .valign {
@@ -446,15 +539,14 @@ a img {
     font-size: 14px;
 }
 
-.status-item .mod p, .status-item .mod blockquote {
+.status-item .mod p,
+.status-item .mod blockquote {
     margin: 0;
     padding: 0;
 }
 
 .status-item .attachment {
-    padding: 0 20px 16px;
-    margin-top: -16px;
-    background: #f9f9f9;
+    padding: 0;
 }
 
 .status-item .mod .actions:not(.empty) {

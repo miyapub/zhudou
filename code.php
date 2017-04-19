@@ -7,12 +7,13 @@
  
     //创建验证码
     $code = '';
+    $arr=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     for($i=0;$i<4;$i++){
         $fontsize = 14;
         $fontcolor = imagecolorallocate($image, rand(0,120), rand(0,120), rand(0,120));
         $x = $i * 25 + 10;
         $y = rand(5,10);
-        $num = (string)rand(0,9);
+        $num = (string)$arr[rand(0,25)];
         $code .= $num;
         imagestring($image, $fontsize, $x, $y, $num, $fontcolor);
     }
@@ -20,13 +21,13 @@
     $_SESSION['code'] = $code;
  
     //增加干扰元素点
-    for ($i=0; $i <800 ; $i++) {
+    for ($i=0; $i <20 ; $i++) {
         $color = imagecolorallocate($image, rand(50,200), rand(50,200), rand(50,200));
         imagesetpixel($image, rand(0,100), rand(0,40), $color);
     }
  
     //增加干扰线
-    for ($i=0; $i <5 ; $i++) {
+    for ($i=0; $i <10 ; $i++) {
         $color = imagecolorallocate($image, rand(50,200), rand(50,200), rand(50,200));
         imageline($image, rand(10,180), rand(10,180), rand(10,180), rand(10,180), $color);
     }
